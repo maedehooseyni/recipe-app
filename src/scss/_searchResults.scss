@@ -1,0 +1,27 @@
+.search-results {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.results {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5rem;
+  left:1px;
+  color: $color-grey-dark-3;
+  font-size: 1.3rem;
+  padding: 0 3.5rem;
+
+  .linkedin-link:link,
+  .linkedin-link:visited {
+    color: $color-grey-dark-3;
+    margin-left: 1px;
+  }
+}

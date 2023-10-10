@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Kaushan+Script&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/index.scss" />
+    <script defer type="module" src="src/js/controller.js"></script>
+
+    <title>Cookpad</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+         <div class="logo">
+          <img class="header__logo" src="/src/img/cooking (2).png" alt="logo" />
+          <p class="name-app">Cook<span>pad</span></p>
+         </div>
+        <form class="search">
+          <button class="btn search__btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>            
+          </button>
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search through 1,000,000 recipes..."
+          />
+        </form>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="nav__btn nav__btn--bookmarks">
+                  <img src="src/img/heart.svg" alt="bookmark svg"></img>
+                <span>BOOKMARK</span>
+              </button>
+              <div class="bookmarks">
+                <ul class="bookmarks__list">
+                  <div class="message">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                      </svg>
+                    </div>
+                    <p>No bookmarks yet</p>
+                  </div>
+                  <!-- <li class="preview">
+                    <a class="preview__link" href="#23456">
+                      <figure class="preview__fig">
+                        <img src="src/img/test-1.jpg" alt="Test" />
+                      </figure>
+                      <div class="preview__data">
+                        <h4 class="preview__name">
+                          Pasta with Tomato Cream ...
+                        </h4>
+                        <p class="preview__publisher">The Pioneer Woman</p>
+                      </div>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="search-results">
+        <ul class="results">
+          <!-- 
+          <li class="preview">
+            <a class="preview__link preview__link--active" href="#23456">
+              <figure class="preview__fig">
+                <img src="src/img/test-1.jpg" alt="Test" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+              </div>
+            </a>
+          </li>
+           -->
+        </ul>
+
+        <p class="copyright">
+          &copy; Made by
+          <a
+            class="linkedin-link"
+            target="_blank"
+            href="https://www.linkedin.com/in/maedehooseyni"
+            >Maede Hooseyni</a
+          >
+        </p>
+      </div>
+
+      <div class="recipe">
+        <div class="message">
+            <div class="primary-message-box">
+              <p class="recipe-primary-message">Start by searching for a recipe</p>
+              <img src="/src/img/blink.svg" alt="blink svg">
+            </div>
+
+        <!-- <div class="spinner">
+          <svg>
+            <use href="src/img/icons.svg#icon-loader"></use>
+          </svg>
+        </div> -->
+
+        <!-- <div class="error">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+              </svg>
+            </div>
+            <p>No recipes found for your query. Please try again!</p>
+          </div> -->
+
+        <!--
+        <figure class="recipe__fig">
+          <img src="src/img/test-1.jpg" alt="Tomato" class="recipe__img" />
+          <h1 class="recipe__title">
+            <span>Pasta with tomato cream sauce</span>
+          </h1>
+        </figure>
+        <div class="recipe__details">
+          <div class="recipe__info">
+            <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g transform="matrix(-1,0,0,1,32,0)"><path d="M16 2.5A13.5 13.5 0 1 0 29.5 16 13.52 13.52 0 0 0 16 2.5zm0 26A12.5 12.5 0 1 1 28.5 16 12.52 12.52 0 0 1 16 28.5zM16.5 7v9a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h5.5V7a.5.5 0 0 1 1 0z" data-name="Layer 2" fill="#2f9e44" data-original="#000000" class="hovered-path"></path></g></svg>
+            <span class="recipe__info-data recipe__info-data--minutes">45</span>
+            <span class="recipe__info-text">minutes</span>
+          </div>
+          <div class="recipe__info">
+             <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M244.587 241.557c32.128-18.389 54.08-52.629 54.08-92.224 0-58.816-47.851-106.667-106.667-106.667S85.333 90.517 85.333 149.333c0 39.595 21.952 73.835 54.08 92.224C59.051 262.656 0 330.603 0 411.136v26.197C0 443.221 4.779 448 10.667 448s10.667-4.779 10.667-10.667v-26.197C21.333 325.611 97.899 256 192 256s170.667 69.611 170.667 155.136v26.197c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-26.197c-.001-80.533-59.052-148.501-139.414-169.579zm-137.92-92.224C106.667 102.272 144.939 64 192 64s85.333 38.272 85.333 85.333-38.272 85.333-85.333 85.333-85.333-38.271-85.333-85.333z" fill="#2f9e44" data-original="#000000" class=""/><path d="M388.224 241.835c23.125-15.296 38.443-41.451 38.443-71.168 0-47.061-38.272-85.333-85.333-85.333-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667c35.285 0 64 28.715 64 64s-28.715 64-64 64c-5.888 0-10.667 4.779-10.667 10.667S335.445 256 341.333 256c70.592 0 128 53.056 128 118.293v20.373c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-20.373c0-61.653-43.008-114.026-102.443-132.458z" fill="#2f9e44" data-original="#000000" class=""/></g></svg>
+            <span class="recipe__info-data recipe__info-data--people">4</span>
+            <span class="recipe__info-text">servings</span>
+            <div class="recipe__info-buttons">
+              <button class="btn--tiny btn--increase-servings">
+               <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              </button>
+              <button class="btn--tiny btn--increase-servings">
+                <svg class="recipe__info-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"   stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="btn--round">
+            <svg class="">
+              <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="recipe__ingredients">
+          <h2 class="heading--2">Recipe ingredients</h2>
+          <ul class="recipe__ingredient-list">
+            <li class="recipe__ingredient">
+              <svg class="recipe__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+
+              <div class="recipe__quantity">1000</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">g</span>
+                pasta
+              </div>
+            </li>
+            <li class="recipe__ingredient">
+             <svg class="recipe__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+
+              <div class="recipe__quantity">0.5</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">cup</span>
+                ricotta cheese
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="recipe__directions">
+          <h2 class="heading--2">How to cook it</h2>
+          <p class="recipe__directions-text">
+            This recipe was designed by
+            <span class="recipe__publisher">The Pioneer Woman</span>. Please check out
+            directions to see more information about this recipe
+          </p>
+          <a
+            class="btn--small recipe__btn"
+            href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+            target="_blank"
+          >
+            <span>Directions</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </a>
+        </div>
+        -->
+      </div>
+    </div>
+  </body>
+</html>

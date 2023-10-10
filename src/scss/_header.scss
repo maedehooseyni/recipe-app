@@ -1,0 +1,164 @@
+//add sans-serif font
+//remove class attribute of svg code
+
+.header {
+  grid-area: head;
+  background: $color-grey-light-2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: 2rem;
+  }
+
+  .name-app {
+    display: inline-block;
+    color: #7a6b67;
+    font-family: "Kaushan Script", "Sans-serif";
+    font-size: 3.5rem;
+    padding-right: 6rem;
+
+    span {
+      color: #37b24d;
+    }
+  }
+}
+
+.search {
+  background-color: $color-grey-light-2;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 8rem;
+  transition: all 0.3s;
+  height: 4.4rem;
+  box-shadow: 0.1rem 0.1rem 4rem 0.1rem rgba($color-grey-dark-1, 0.1);
+
+  &__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: #70625e;
+    font-size: 1.5rem;
+    width: 30rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-grey-light-3;
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: auto;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-family: inherit;
+    width: 27px;
+    height: 10px;
+    padding-top: 14px;
+    margin-right: 5px;
+    background-color: $color-grey-light-2;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: $color-grey-light-3;
+    }
+  }
+}
+
+.nav {
+  align-self: stretch;
+  margin-right: 2.5rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    color: #70625e;
+    font-weight: 400px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+
+    margin-left: 8rem;
+    margin-right: 1.2rem;
+
+    &:hover {
+      color: #d3c7c3;
+    }
+
+    img {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      padding: 3px 0;
+      margin-right: 0.8rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.bookmarks {
+  padding: 1rem 0;
+  position: absolute;
+  right: -2.5rem;
+  z-index: 10;
+  width: 40rem;
+  background-color: $color-grey-light-2;
+  box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.06);
+  border-radius: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__field {
+    cursor: pointer;
+    padding: 0 4rem;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  .nav__btn--bookmarks:hover + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
