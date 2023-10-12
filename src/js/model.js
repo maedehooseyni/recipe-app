@@ -62,7 +62,6 @@ export const loadSearchResults = async function (query) {
 export const updateServings = function (newServings) {
   state.recipes.ingredients.forEach((ing) => {
     ing.amount = (ing.amount * newServings) / state.recipes.servings;
-    // newamount = oldamount * newservings / oldservings
   });
 
   //Update state
