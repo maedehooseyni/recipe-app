@@ -13,7 +13,7 @@ export const state = {
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(
-      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${KEY}`
+      `SSLhttps://api.spoonacular.com/recipes/${id}/information?apiKey=${KEY}`
     );
 
     const recipes = data;
@@ -43,7 +43,7 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
 
     const data = await getJSON(
-      `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${KEY}`
+      `SSLhttps://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${KEY}`
     );
 
     state.search.results = data.results.map((rec) => {
